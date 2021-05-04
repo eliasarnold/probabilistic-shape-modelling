@@ -1,0 +1,25 @@
+Requirements: 4pages, abgabe: dienstag
+
+Introduction (Alex):
+- umschreiben
+- inhalt erweitern(?)
+
+
+Methods (Alex):
+- rigid alignment
+- build kernel
+- ICP for correspondence -> PCA model
+- ICP for reconstruction
+
+Results (Elias):
+- rigid alignment (before, after)
+- model -> length, area around joints, kernels (What can be modeled, what can't?)
+- visual error, calculated error ICP
+- reconstruction (visual?)
+
+Discussion (Elias):
+- kleine zusammenfassung
+- what we learned? (save and visualize every step)
+- what can we improve? (model?)
+- auf resultate eingehen
+

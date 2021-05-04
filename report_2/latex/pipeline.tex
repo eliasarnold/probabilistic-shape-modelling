@@ -1,0 +1,18 @@
+\begin{tikzpicture}[scale=0.2, node distance=2cm, auto]
+	% Place nodes
+	\node [block, fill=orange] (init) {Compute Posterior};
+	%\node [cloud, left of=init, node distance=4cm] (lms) {clicked landmarks};
+	\node [cloud, right of=init, text width=2cm, node distance=3cm, scale=1.0] (lms) {Clicked Landmarks};
+	%\node [cloud, below of=lms] (rigid) {Rigid Alignment};
+	\node [block, below of=init] (lmChain) {MCMC Landmark Fit};
+	\node [block, below of=lmChain] (lmChainprofile) {MCMC Landmark-Profile Fit};
+	\node [block, below of=lmChainprofile] (profileChain) {MCMC Profile Fit};
+	\node [cloud, node distance=3.2cm, right of=profileChain] (lel) {Femur Segmentation};
+
+	\path [line, line width=0.5mm] (init) -- (lmChain);
+	\path [line, line width=0.5mm] (lmChain) -- (lmChainprofile);
+	\path [line, line width=0.5mm] (lmChainprofile) -- (profileChain);
+	%\path [line,dashed, line width=0.5mm] (rigid) -- (init);
+	\path [line,dashed, line width=0.5mm] (lms) -- (init);
+	\path [line,dashed, line width=0.5mm] (profileChain) -- (lel);
+\end{tikzpicture}
